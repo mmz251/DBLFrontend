@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Don't b Lazy </title>
+		<link type="text/css" rel="stylesheet" href="landing.css"/>
+		<link href='http://fonts.googleapis.com/css?family=Lato:100' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+		<link href='http://fonts.googleapis.com/css?family=Aldrich|Play:400,700|Nova+Square' rel='stylesheet' type='text/css'>
+
+	</head>
+	<body>
+
+		<div class = "everything">
+			
+			<div class = "header"> 
+				<div id="logo"> 
+					<h2> Don't b Lazy </h2>
+				</div> 
+
+				<div id= "tagline">
+					<p>Friends keep you accountable for your goals. </p>
+				</div>
+			</div>
+
+			<div id= "container">
+			
+				<div id="login">
+					<a href=" "> Log In </a>
+				</div>
+
+				<div id="signup"> 
+					<a href="signup.html"> Sign Up </a>
+				</div> 
+			</div>
+
+			<div id="footer">
+				<h4> About Us </h4> 
+			</div>
+
+		</div>
+
+
+		<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+
+  Launch demo modal
+		</button>
+
+
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="js-title-step"></h4>
+      </div>
+      <div class="modal-body">
+        <div class="row hide" data-step="1" data-title="This is the first step!">
+          <div class="jumbotron">This is step 1</div>
+        </div>
+        <div class="row hide" data-step="2" data-title="This is the second step!">
+          <div class="jumbotron">This is step 2</div>
+        </div>
+	div class="row hide" data-step="3" data-title="This is the third and last step!">
+          <div class="jumbotron">This is step 3</div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default js-btn-step pull-left" data-orientation="cancel" data-dismiss="modal"></button>
+        <button type="button" class="btn btn-warning js-btn-step" data-orientation="previous"></button>
+        <button type="button" class="btn btn-success js-btn-step" data-orientation="next"></button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+		<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+		
+		<script src="//netdna.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+
+		<script src="src/jquery-bootstrap-modal-steps.js"></script>
+
+		<script>
+			$('#myModal').modalSteps();
+
+			$('#myModal').modalSteps({
+			btnCancelHtml: 'Cancel',
+			btnPreviousHtml: 'Previous',
+			btnNextHtml: 'Next',
+			btnLastStepHtml: 'Complete',
+			disableNextButton: false,
+			completeCallback: function(){},
+			callbacks: {}
+			});
+		</script>
+		
+	</body>
+
+
+</html>
